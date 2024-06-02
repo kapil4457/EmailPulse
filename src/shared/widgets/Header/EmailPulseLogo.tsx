@@ -6,6 +6,7 @@ function Icon() {
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
       colorInterpolationFilters="sRGB"
+      preserveAspectRatio="none"
       version="1"
       viewBox="0 0 340 250"
       style={{
@@ -16,7 +17,7 @@ function Icon() {
         justifyItems: "center",
         alignItems: "center",
       }}
-      className="w-[15rem] lg:w-[20rem]"
+      className="w-[100%] lg:w-[20rem]"
     >
       <g fill="#333" className="iconlinesvg-g iconlinesvg">
         <g className="tp-name">
