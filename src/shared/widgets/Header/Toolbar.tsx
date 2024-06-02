@@ -6,7 +6,7 @@ import React from "react";
 const Toolbar = () => {
   return (
     <>
-      <Button variant="outline" className="bg-blue-400">
+      <Button variant="outline" className="bg-blue-400 hover:bg-blue-600">
         Start Trial
       </Button>
       <Link

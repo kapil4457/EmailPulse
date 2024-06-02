@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Recursive } from "next/font/google";
 import "../shared/styles/globals.css";
 import Providers from "@/shared/utils/Providers";
+import { ClerkProvider } from "@clerk/nextjs";
 
 const recursive = Recursive({ subsets: ["latin"] });
 
@@ -16,10 +17,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={recursive.className}>
-        <Providers>{children}</Providers>
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body className={recursive.className}>
+          <Providers>{children}</Providers>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
