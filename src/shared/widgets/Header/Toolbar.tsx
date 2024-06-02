@@ -1,15 +1,22 @@
 "use client";
-import { Button } from "@nextui-org/react";
+import { Button, buttonVariants } from "@/components/ui/button";
 import Link from "next/link";
 import React from "react";
 
 const Toolbar = () => {
   return (
     <>
-      <Button color="primary" className="text-lg">
+      <Button variant="outline" className="bg-blue-400">
         Start Trial
       </Button>
-      <Link href="/sign-up">Login</Link>
+      <Link
+        className={buttonVariants({
+          variant: "outline",
+        })}
+        href="/sign-up"
+      >
+        Login
+      </Link>
     </>
   );
 };
